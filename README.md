@@ -1,5 +1,5 @@
 # Product Watcher Docker
-Runs product-checker in Docker every hour. The base of this Docker image comes 
+Runs product-watcher in Docker every hour. The base of this Docker image comes 
 from this repo: [product-watcher](https://github.com/fusoya59/product-watcher).
 Make sure to build product-watcher before building this image.
 

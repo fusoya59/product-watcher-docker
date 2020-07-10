@@ -1,0 +1,1 @@
+0 * * * * root /product-watcher/product-watcher.sh >> /var/log/product-watcher.log 2>&1

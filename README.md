@@ -23,6 +23,8 @@ or `silent`. Defaults to `info`.
 
 `TO_EMAIL` : string - the email to send notifications to. 
 
+`FROM_EMAIL` : string - sender email. 
+
 `NOTIFICATION_PLUGIN` - the plugin to use for notification API. Defaults to 'sendgrid'
 
 `NOTIFICATION_URL` - some endpoint that'll trigger a notification.
@@ -37,8 +39,11 @@ Example docker run:
 ```
 $ docker run -d \
   --env LOG_LEVEL=info \
-  --env TO_EMAIL=helloworld@gmail.com \
-  --env NOTIFICATION_URL=https://notify.me \
+  --env TO_EMAIL=fusoya59@gmail.com \
+  --env FROM_EMAIL=fusoya59@gmail.com \
+  --env NOTIFICATION_PLUGIN=sendgrid \  
+  --env NOTIFICATION_URL=https://api.sendgrid.com/v3/mail/send \
+  --env SENDGRID_API_KEY=apikey \
   --rm \
   --name product-watcher-docker \
   product-watcher-docker:latest
